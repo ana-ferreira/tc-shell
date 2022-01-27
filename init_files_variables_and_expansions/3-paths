@@ -1,6 +1,8 @@
 #!/bin/bash
-i=1
-for diretorios in ${PATH[*:]}; do
-	i++
+IFS=$':'
+count=0
+for diretorio in ${PATH[*]}; do
+	count=$[$count+1]
+	echo $diretorio
 done
-echo i
+echo $count
