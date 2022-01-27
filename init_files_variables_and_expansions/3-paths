@@ -1,0 +1,6 @@
+#!/bin/bash
+i=1
+for diretorios in ${PATH[*:]}; do
+	i++
+done
+echo i
