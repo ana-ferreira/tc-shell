@@ -1,7 +1,2 @@
 #!/bin/bash
-IFS=$':'
-count=0
-for diretorio in ${PATH[*]}; do
-	count=$[$count+1]
-done
-echo $count
+echo $PATH | tr ":" "\n" | wc -l
