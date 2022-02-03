@@ -1,10 +1,2 @@
 #!/bin/bash
-IFS=$'\n'
-letras=( a b c d e f g h i j k l m n o p q r s t u v w x y x)
-for letra in ${letras[*]}; do
-    for letrasec in ${letras[*]}; do
-	if [ "$letra$letrasec" != "oo" ]; then
-            echo "$letra$letrasec"
-        fi
-    done
-done
+echo {a..z}{a..z} | tr ' ' '\n' | grep -v 'oo'
